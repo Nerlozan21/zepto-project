@@ -1,0 +1,34 @@
+.container {
+  padding: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.chipsContainer {
+  margin-bottom: 10px;
+}
+
+.chip {
+  display: inline-block;
+  margin-right: 5px;
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inputField {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.userDataItem {
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
