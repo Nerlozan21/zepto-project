@@ -1,9 +1,10 @@
 import React from "react";
+import "../Styles/ChipStyles.css"; 
 
 interface ChipProps {
   name: string;
   onRemove: () => void;
-  className?: string; // Allow the className to be optional
+  className?: string;
 }
 
 const Chip: React.FC<ChipProps> = ({ name, onRemove }) => {

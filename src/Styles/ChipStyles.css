@@ -1,0 +1,23 @@
+.chip {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 8px;
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  background-color: #2980b9;
+}
+
+.chip:hover::after {
+  color: white; 
+}
+
+.remove-icon{
+  color: black;
+  margin: 0.4rem;
+}

@@ -26,41 +26,28 @@ const Data = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setInputValue(value);
-
-    // Filter the data based on the input value
     const filtered = data.filter((userData) =>
       userData.name.toLowerCase().includes(value.toLowerCase())
     );
-
-    // Exclude the items that are already selected as chips
     const remainingFilteredData = filtered.filter(
       (userData) => !selectedChips.includes(userData.name)
     );
-
     setFilteredData(remainingFilteredData);
   };
 
   const handleItemClick = (name: string) => {
     setSelectedChips([...selectedChips, name]);
-
-    // Remove the clicked item from the filteredData
     const updatedFilteredData = filteredData.filter(
       (userData) => userData.name !== name
     );
-
     setInputValue("");
     setFilteredData(updatedFilteredData);
   };
 
   const handleChipRemove = (name: string) => {
-    // Remove the chip from selectedChips
     const updatedChips = selectedChips.filter((chip) => chip !== name);
     setSelectedChips(updatedChips);
-
-    // Find the index of the item in the original data
     const originalIndex = data.findIndex((userData) => userData.name === name);
-
-    // Insert the item back to its original position in the filteredData
     if (originalIndex !== -1) {
       const updatedFilteredData = [...filteredData];
       updatedFilteredData.splice(originalIndex, 0, data[originalIndex]);
